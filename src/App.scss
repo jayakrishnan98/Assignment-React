@@ -1,0 +1,98 @@
+@import './shared/styles/variables.scss';
+
+.m-1 {
+    margin: 0.5%
+}
+
+.p-1 {
+    padding: 1%;
+}
+
+.layout-min-height {
+    min-height: 100vh;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.data-chart {
+    height: unset;
+}
+
+.padding-items {
+    padding: 0.3rem
+}
+
+.padding-items-row {
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+}
+
+.item-name-text {
+    font-size: small;
+    font-weight: 100;
+}
+
+.item-count-text {
+    font-size: xx-large;
+    font-weight: 700;
+    margin-top: 0.7rem;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.stat-container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.red-text {
+    color: #f50f0fec;
+    font-weight: 600;
+}
+
+.green-text {
+    color: #07eb39e7;
+    font-weight: 600;
+}
+
+.profit {
+    font-size: xx-large;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+.pr-1 {
+    padding-right: 1rem !important;
+}
+
+.value-rouned {
+    font-size: 8px;
+    margin-bottom: 0;
+    margin-top: 7px;
+}
+
+.profit-growth{
+    padding-top:1.5rem;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.icon-width-height{
+    width: 3rem !important;
+    height: 3rem !important;
+}
