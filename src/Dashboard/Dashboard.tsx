@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Tiny } from "@ant-design/plots";
-import { Flex, Layout, Menu, Col, Row } from "antd";
+import { Layout, Menu, Col, Row } from "antd";
 import type { MenuProps } from "antd";
 import "./Dashboard.scss";
 import {
@@ -27,7 +27,7 @@ function getItem(
   } as MenuItem;
 }
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Sider } = Layout;
 const items: MenuItem[] = [
   getItem("Option 1", "1", <PieChartOutlined />),
   getItem("Option 2", "2", <DesktopOutlined />),
