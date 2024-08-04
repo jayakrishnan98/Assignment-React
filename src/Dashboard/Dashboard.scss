@@ -1,34 +1,48 @@
 @import '../shared/styles/variables.scss';
 
-.main-container-dark{
+.main-container-dark {
     padding: 0;
     margin: 0;
     background: $secondary-color;
     height: 100%;
 
-    .header{
+    .header {
         background-color: $primary-color;
         height: 4rem;
     }
 
-    .text-color{
+    .text-color {
         color: $white-color;
     }
 
-    .card-bg{
+    .card-bg {
         background-color: $primary-color;
         padding: 1rem;
         border-radius: 10px;
     }
 
-    .background-black{
+    .background-black {
         background: $secondary-color
     }
 
-    .background-secondary{
+    .background-secondary {
         background: $primary-color;
     }
+
+    .ant-select-selector {
+        border-radius: 26px !important;
+        background: #444444 !important;
+        border: 0px !important;
+        color: white !important;
+        width: 6rem !important;
+    }
+
+    .ant-select-selection-item {
+        color: white !important;
+    }
+
+    .ant-table-cell{
+        color: #fff !important;
+    }
+
 }
-
-
- 

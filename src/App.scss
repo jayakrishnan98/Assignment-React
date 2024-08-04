@@ -25,7 +25,7 @@
 }
 
 .padding-items-row {
-    padding-left: 0.5rem;
+    padding-left: 1rem;
     padding-right: 1rem;
 }
 
@@ -51,7 +51,8 @@
 .stat-container {
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
+    padding-top: 0.9rem;
 }
 
 .red-text {
@@ -70,6 +71,10 @@
     margin-top: 1.5rem;
 }
 
+.mt-1 {
+    margin-top: 1rem;
+}
+
 .pr-1 {
     padding-right: 1rem !important;
 }
@@ -80,8 +85,8 @@
     margin-top: 7px;
 }
 
-.profit-growth{
-    padding-top:1.5rem;
+.profit-growth {
+    padding-top: 1.5rem;
 }
 
 .justify-content-center {
@@ -92,7 +97,112 @@
     align-items: center;
 }
 
-.icon-width-height{
+.fourth-section-item {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.icon-width-height {
     width: 3rem !important;
     height: 3rem !important;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.recharts-responsive-container {
+    min-height: 15rem;
+}
+
+.pt-15 {
+    padding-top: 1.5rem;
+}
+
+.pl-13 {
+    padding-left: 1.3rem;
+}
+
+.recharts-default-legend {
+    display: none;
+}
+
+.right-fourth-section-icon {
+    font-size: 20px !important;
+    color: #bdbaba7a;
+}
+
+.ant-table-thead>tr>th {
+    border-right: none;
+}
+
+/* Hide vertical lines in the table body */
+.ant-table-tbody>tr>td {
+    border-right: none;
+}
+
+:where(.css-dev-only-do-not-override-1hx3b35).ant-table-wrapper .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before,
+:where(.css-dev-only-do-not-override-1hx3b35).ant-table-wrapper .ant-table-thead>tr>td:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    width: 0px !important;
+}
+
+:where(.css-dev-only-do-not-override-1hx3b35).ant-table-wrapper .ant-table-thead>tr>th,
+:where(.css-dev-only-do-not-override-1hx3b35).ant-table-wrapper .ant-table-thead>tr>td {
+    background: #ffffff00 !important;
+}
+
+.img {
+    border-radius: 50%;
+}
+
+// scroll
+/* Base class for custom scrollbar styles */
+.scrollbar-styles {
+    overflow-y: scroll;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #888 #333; /* For Firefox */
+}
+
+/* Webkit-based browsers */
+.scrollbar-styles::-webkit-scrollbar {
+    width: 12px; /* Width of the entire scrollbar */
+}
+
+.scrollbar-styles::-webkit-scrollbar-track {
+    background: #333; /* Track color */
+}
+
+.scrollbar-styles::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar thumb color */
+    border-radius: 10px; /* Roundness of the scroll thumb */
+    border: 3px solid #333; /* Padding around thumb */
+}
+
+.scrollbar-styles::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Thumb color on hover */
+}
+
+/* Main container styles */
+.main-container {
+    max-height: calc(100vh - 10rem);
+    overflow-y: scroll;
+    @extend .scrollbar-styles;
+}
+
+
+/* Custom scroll class with height */
+.custom-scroll {
+    height: 21rem;
+    /* Other styles */
+    @extend .scrollbar-styles;
+}
+
+// ===================================
+
+.pb-04{
+    padding-bottom: 0.4rem;
+}
+
+.mb-0{
+    margin-bottom: 0;
 }
