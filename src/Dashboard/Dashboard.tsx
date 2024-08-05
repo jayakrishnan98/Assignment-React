@@ -412,7 +412,7 @@ const Dashboard: React.FC = () => {
                           <div className="card-bg h-100 p-1">
                             <div className="icon-container text-color">
                               <img
-                                src={"../assets/" + item?.icon} alt="image of icon"
+                                src={"../assets/" + item?.icon} alt="icon"
                                 className="w-20"
                               />
                             </div>
