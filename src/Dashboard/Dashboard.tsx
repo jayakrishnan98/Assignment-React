@@ -10,7 +10,16 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { Tiny } from "@ant-design/plots";
-import { Layout, Menu, Col, Row, Table, Tag, ConfigProvider } from "antd";
+import {
+  Layout,
+  Menu,
+  Col,
+  Row,
+  Table,
+  Tag,
+  ConfigProvider,
+  Space,
+} from "antd";
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
 import { Select } from "antd";
@@ -26,6 +35,10 @@ import {
   TeamOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import Paper from "@mui/material/Paper";
+import InputBase from "@mui/material/InputBase";
+import IconButton from "@mui/material/IconButton";
+import SearchIcon from "@mui/icons-material/Search";
 
 const columns: any = [
   {
@@ -388,8 +401,38 @@ const Dashboard: React.FC = () => {
           />
         </Sider>
         <Layout className="background-black">
-          <Header className="header">
-            <div className="demo-logo" />
+          <Header className="header d-flex align-items-center justify-content-between">
+            <Paper
+              component="form"
+              className="search-container bg-primary"
+              sx={{
+                p: "2px 4px",
+                display: "flex",
+                alignItems: "center",
+                width: 300,
+              }}
+            >
+              <IconButton sx={{ p: "10px" }} className="px-4" aria-label="menu">
+                <SearchIcon className="text-color" />
+              </IconButton>
+              <InputBase
+                sx={{ ml: 1, flex: 1 }}
+                placeholder="Search"
+                className="text-color"
+              />
+            </Paper>
+            <div className="text-color account-items">
+              <Space>
+                <div className="iconz-container">
+                  <img
+                    src={"../assets/5.jpg"}
+                    width="65%"
+                    alt="Avatar"
+                    className="img"
+                  ></img>
+                </div>
+              </Space>
+            </div>
           </Header>
           <Row>
             <Col span={24}>
@@ -412,7 +455,8 @@ const Dashboard: React.FC = () => {
                           <div className="card-bg h-100 p-1">
                             <div className="icon-container text-color">
                               <img
-                                src={"../assets/" + item?.icon} alt="icon"
+                                src={"../assets/" + item?.icon}
+                                alt="icon"
                                 className="w-20"
                               />
                             </div>
@@ -630,7 +674,10 @@ const Dashboard: React.FC = () => {
                                 className="img"
                               ></img>
                             </Col>
-                            <Col span={22} className="customer-name text-color d-flex align-items-center">
+                            <Col
+                              span={22}
+                              className="customer-name text-color d-flex align-items-center"
+                            >
                               <h3 className="mb-0">{item.name}</h3>
                             </Col>
                           </Row>
