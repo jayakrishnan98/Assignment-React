@@ -16,9 +16,7 @@ import {
   Col,
   Row,
   Table,
-  Tag,
   ConfigProvider,
-  Space,
 } from "antd";
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
@@ -26,6 +24,7 @@ import { Select } from "antd";
 import type { MenuProps } from "antd";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import NotificationsIcon from "@mui/icons-material/Notifications";
 import "./Dashboard.scss";
 import {
   DesktopOutlined,
@@ -34,6 +33,8 @@ import {
   RightCircleFilled,
   TeamOutlined,
   UserOutlined,
+  MailOutlined,
+  SettingOutlined,
 } from "@ant-design/icons";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
@@ -60,17 +61,13 @@ const columns: any = [
     title: "Tags",
     key: "tags",
     dataIndex: "tags",
-    render: (tags: string[]) => (
+    render: (tags:any) => (
       <span>
-        {tags.map((tag) => {
-          let color = tag.length > 5 ? "geekblue" : "green";
-          if (tag === "loser") {
-            color = "volcano";
-          }
+        {tags.map((tag:any) => {
           return (
-            <Tag color={color} key={tag}>
-              {tag.toUpperCase()}
-            </Tag>
+            <div className="tag-styel" style={{background: String(tag?.color)}} key={tag}>
+              {tag.name.toUpperCase()}
+            </div>
           );
         })}
       </span>
@@ -131,21 +128,42 @@ const tableData = [
     name: "John Brown",
     age: 32,
     address: "New York No. 1 Lake Park",
-    tags: ["nice", "developer"],
+    tags: [{name:"Delivered", color: '#09eb2786'}],
   },
   {
     key: "2",
     name: "Jim Green",
     age: 42,
     address: "London No. 1 Lake Park",
-    tags: ["loser"],
+    tags: [{name:"Pending", color: '#ebdc0986'}],
   },
   {
     key: "3",
     name: "Joe Black",
     age: 32,
     address: "Sydney No. 1 Lake Park",
-    tags: ["cool", "teacher"],
+    tags: [{name: "Cancelled", color: '#eb3e0986'}],
+  },
+  {
+    key: "4",
+    name: "Joe Black",
+    age: 32,
+    address: "Sydney No. 1 Lake Park",
+    tags: [{name:"Cancelled",color: '#eb3e0986'}],
+  },
+  {
+    key: "5",
+    name: "Joe Black",
+    age: 32,
+    address: "Sydney No. 1 Lake Park",
+    tags: [{name:"Cancelled",color: '#eb3e0986'}],
+  },
+  {
+    key: "6",
+    name: "Joe Black",
+    age: 32,
+    address: "Sydney No. 1 Lake Park",
+    tags: [{name:"Cancelled",color: '#eb3e0986'}],
   },
 ];
 const data = [
@@ -300,15 +318,8 @@ const { Header, Sider } = Layout;
 const items: MenuItem[] = [
   getItem("Option 1", "1", <PieChartOutlined />),
   getItem("Option 2", "2", <DesktopOutlined />),
-  getItem("User", "sub1", <UserOutlined />, [
-    getItem("Tom", "3"),
-    getItem("Bill", "4"),
-    getItem("Alex", "5"),
-  ]),
-  getItem("Team", "sub2", <TeamOutlined />, [
-    getItem("Team 1", "6"),
-    getItem("Team 2", "8"),
-  ]),
+  getItem("User", "sub1", <UserOutlined />),
+  getItem("Team", "sub2", <TeamOutlined />),
   getItem("Files", "9", <FileOutlined />),
 ];
 
@@ -392,9 +403,12 @@ const Dashboard: React.FC = () => {
       <Layout className="layout-min-height background-black">
         <Sider className="background-secondary" collapsible collapsed={true}>
           <div className="demo-logo-vertical" />
+          <div className="logo-container d-flex justify-content-center align-items-center">
+          <img src="../assets/main-logo.png" alt="logo comes here" width="50%"/>
+          </div>
           <Menu
             theme="dark"
-            className="background-secondary"
+            className="bg-none"
             defaultSelectedKeys={["1"]}
             mode="inline"
             items={items}
@@ -421,17 +435,24 @@ const Dashboard: React.FC = () => {
                 className="text-color"
               />
             </Paper>
-            <div className="text-color account-items">
-              <Space>
-                <div className="iconz-container">
-                  <img
-                    src={"../assets/5.jpg"}
-                    width="65%"
-                    alt="Avatar"
-                    className="img"
-                  ></img>
-                </div>
-              </Space>
+            <div className="d-flex text-color account-items justify-content-end  align-items-center">
+              <div className="icon1 round-icons d-flex justify-content-center align-items-center">
+                <MailOutlined />
+              </div>
+              <div className="icon3 round-icons d-flex justify-content-center align-items-center">
+                <SettingOutlined />
+              </div>
+              <div className="icon2 round-icons d-flex justify-content-center align-items-center">
+                <NotificationsIcon />
+              </div>
+              <div className="iconz-container">
+                <img
+                  src={"../assets/5.jpg"}
+                  width="100%"
+                  alt="Avatar"
+                  className="img"
+                ></img>
+              </div>
             </div>
           </Header>
           <Row>
@@ -594,7 +615,7 @@ const Dashboard: React.FC = () => {
                     return (
                       <div className="fourth-section-item text-color">
                         <Row>
-                          <Col span={5} className="iconz-container">
+                          <Col span={5}>
                             <img
                               src={"../assets/" + item?.icon}
                               width={75}

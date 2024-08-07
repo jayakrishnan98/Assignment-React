@@ -44,6 +44,23 @@
     display: flex !important;
 }
 
+.justify-content-end{
+    justify-content: flex-end;
+}
+
+.iconz-container{
+    max-width: 3rem;
+}
+
+.bg-none,
+.ant-layout-sider-trigger {
+    background: none !important;
+}
+
+.logo-container{
+    height: 4rem;
+}
+
 .justify-content-between {
     justify-content: space-between;
 }
@@ -134,21 +151,25 @@
 
 .ant-table-thead>tr>th {
     border-right: none;
+    background: none !important;
 }
 
 /* Hide vertical lines in the table body */
 .ant-table-tbody>tr>td {
     border-right: none;
+    background: none !important
 }
 
 :where(.css-dev-only-do-not-override-1hx3b35).ant-table-wrapper .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before,
 :where(.css-dev-only-do-not-override-1hx3b35).ant-table-wrapper .ant-table-thead>tr>td:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
     width: 0px !important;
+    background: none !important
 }
 
 :where(.css-dev-only-do-not-override-1hx3b35).ant-table-wrapper .ant-table-thead>tr>th,
 :where(.css-dev-only-do-not-override-1hx3b35).ant-table-wrapper .ant-table-thead>tr>td {
     background: #ffffff00 !important;
+    background: none !important
 }
 
 .img {
@@ -217,4 +238,27 @@
 
 .account-items{
     width: 35% !important;
+}
+
+.round-icons {
+    /* padding: 10px; */
+    background-color: #888;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+:where(.css-dev-only-do-not-override-1pg9a38).ant-menu-dark .ant-menu-item-selected, :where(.css-dev-only-do-not-override-1pg9a38).ant-menu-dark>.ant-menu .ant-menu-item-selected {
+    background-color: none !important;
+    border-left: #1677ff 4px solid;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important; 
+    color: #1677ff;
+}
+
+.tag-styel{
+    padding: 0.5rem !important;
+    border-radius: 20px;
+    width: fit-content;
 }
